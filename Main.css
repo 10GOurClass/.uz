@@ -122,3 +122,21 @@ body{
     -khtml-user-select: none;
     user-select: none;
     }
+
+.Blocker{
+    width: 100%;
+    height: 3000px;
+    background: #9c9797;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+.Blocker p{
+    font-size: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+}
+.ok{
+    display: none;
+}
