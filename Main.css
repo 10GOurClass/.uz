@@ -116,3 +116,9 @@
     right: 0px;
     opacity: 0.3;
 }
+
+body{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    }
