@@ -18,6 +18,23 @@ nameOfClass.addEventListener("click", hideCards);
 
 var openCardId = null;
 
+function checkOpenCard() {
+    if (openCardId !== null) {
+         
+    } else {
+        var cards = document.getElementsByClassName("cards");
+        for (var i = 0; i < cards.length; i++) {
+            
+             cards[i].style.opacity = "1";
+             cards[i].style.filter = "none"
+        }
+    }
+  }
+  
+  // Проверять каждую секунду
+  setInterval(checkOpenCard, 100);
+  
+
 function toggleCard(cardId) {
     var card = document.getElementById("card" + cardId);
     var description = document.getElementById("description" + cardId);
@@ -71,6 +88,7 @@ for (var i = 1; i < 21; i++) {
     description = document.getElementById("description" + i);
     description.style.display = "none";
 }
+
 
 const Cheker = document.getElementById("Phone");
 if (window.screen.width > 500){
