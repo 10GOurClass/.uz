@@ -95,11 +95,6 @@
     border-radius: 10px 0 10px 0;
     margin: -20px;
 }
-.name:hover{
-    color: chocolate;
-    font-size: 20px;
-    text-shadow: 0px 35px rgb(89, 70, 70);
-}
 @media only screen and (max-width: 600px) {
     .mainBody{
         background: rgb(16,33,51);
