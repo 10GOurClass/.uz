@@ -47,39 +47,29 @@ function toggleCard(cardId) {
       
       openCard.style.width = "150px";
       openCard.style.height = "150px";
-      openCard.style.filter = "none";
       openDescription.style.display = "none";
       openName.style.display = "block"; 
-      openCard.style.opacity = "1";          
+
   }
-  
-  var cards = document.getElementsByClassName("cards");
-  for (var i = 0; i < cards.length; i++) {
-      if (cards[i].id !== "card" + cardId) {
-          cards[i].style.opacity = "1";
-          cards[i].style.filter = "none"
-      }
-  }
-  
   if (card.style.width === "200px" && card.style.height === "200px") {
       card.style.width = "150px";
       card.style.height = "150px";
       description.style.display = "none";
       name.style.display = "block";
-      openCardId = null;     
+      openCardId = null;
   } else {
       card.style.width = "200px";
       card.style.height = "200px";
       description.style.display = "block";
       name.style.display = "none";
       openCardId = cardId;
+      card.style.opacity = "1";
+      card.style.filter = "none"
 
-      var cards = document.getElementsByClassName("cards");
-      for (var i = 0; i < cards.length; i++) {
-          if (cards[i].id !== "card" + cardId) {
-              cards[i].style.opacity = "0.5";
-              cards[i].style.filter = "blur(5px)"
-          }
+      var closedCards = document.querySelectorAll('.cards:not(#card' + cardId + ')');
+      for (var i = 0; i < closedCards.length; i++) {
+          closedCards[i].style.opacity = "0.5";
+          closedCards[i].style.filter = "blur(5px)";
       }
       
   }
@@ -94,3 +84,5 @@ const Cheker = document.getElementById("Phone");
 if (window.screen.width > 500){
     Cheker.className = "Blocker"
 }
+
+
