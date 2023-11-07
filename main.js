@@ -71,3 +71,8 @@ for (var i = 1; i < 21; i++) {
     description = document.getElementById("description" + i);
     description.style.display = "none";
 }
+
+const Cheker = document.getElementById("Phone");
+if (window.screen.width > 500){
+    Cheker.className = "Blocker"
+}
