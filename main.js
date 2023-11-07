@@ -31,7 +31,6 @@ function checkOpenCard() {
     }
   }
   
-  // Проверять каждую секунду
   setInterval(checkOpenCard, 100);
   
 
@@ -55,13 +54,13 @@ function toggleCard(cardId) {
       card.style.width = "150px";
       card.style.height = "150px";
       description.style.display = "none";
-      name.style.display = "block";
+      name.style.margin = "-38px"
       openCardId = null;
   } else {
       card.style.width = "200px";
       card.style.height = "200px";
       description.style.display = "block";
-      name.style.display = "none";
+      name.style.margin = "-2px"
       openCardId = cardId;
       card.style.opacity = "1";
       card.style.filter = "none"
@@ -84,5 +83,3 @@ const Cheker = document.getElementById("Phone");
 if (window.screen.width > 500){
     Cheker.className = "Blocker"
 }
-
-
