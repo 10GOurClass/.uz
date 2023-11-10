@@ -48,7 +48,7 @@ function toggleCard(cardId) {
       openCard.style.height = "150px";
       openDescription.style.display = "none";
       openName.style.display = "block"; 
-
+      name.style.margin = "-38px"
   }
   if (card.style.width === "200px" && card.style.height === "200px") {
       card.style.width = "150px";
