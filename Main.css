@@ -17,7 +17,6 @@
 .line p{
     font-size: 40px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid red;
     border-radius: 10px 0 10px 0;
 }
 .mainBody{
@@ -67,9 +66,9 @@
     left: 0;
 }
 .name{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
-    color: rgb(8, 240, 240);
+    color: rgb(240, 211, 20);
     transition: 1s;
     width: 100px;
     height: 30px;
@@ -78,9 +77,10 @@
 }
 .name::before{
     content: '';
-    height: 100px;
+    height: 20px;
     width: 100px;
     border: 1px solid salmon;
+    position: relative;
 }
 .name::after{
     content: '';
@@ -95,11 +95,12 @@
     border-radius: 10px 0 10px 0;
     margin: -20px;
 }
+
 @media only screen and (max-width: 600px) {
     .mainBody{
         background: rgb(16,33,51);
         background: linear-gradient(59deg, rgba(16,33,51,1) 0%, rgba(39,69,79,1) 41%, rgba(21,79,176,1) 90%);
-        height: 2100px;
+        height: 2300px;
     }
 }
 
@@ -111,12 +112,6 @@
     right: 0px;
     opacity: 0.3;
 }
-
-body{
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-    }
 
 .Blocker{
     width: 100%;
@@ -134,4 +129,63 @@ body{
 }
 .ok{
     display: none;
+}
+body{
+    -youbkit-touch-callout: none; /* Сафари для iOS */
+    -youbkit-user-select: none;   /* Chrome 6.0+, Safari 3.1+, Edge и Opera 15+ */
+    -moz-user-select: none;    /* Fire Fox */
+    -ms-user-select: none;        /* IE 10+ и Edge */
+    user-select: none;  
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        border: 3px dashed rgb(64, 48, 48);
+        box-shadow: 10px 10px 10px rgb(46, 44, 44);
+        border-radius: 10px;
+        justify-content: center;
+      }
+      
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      
+      .active {
+        opacity: 1;
+      }
+      .slide img{
+        width: 100%;
+        height: 290px;
+        border-radius: 10px;
+      }
+      .contain{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+.GLogo{
+    animation-name: Logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    text-shadow: 0px 0px 0px red;
+}
+@keyframes Logo{
+    0%{
+        text-shadow: 5px 5px 5px red;
+    }
+    50%{
+        text-shadow: 20px 10px 5px red;
+    }
+    100%{
+        text-shadow: 5px 5px 5px red;
+    }
 }
