@@ -103,3 +103,41 @@ document.addEventListener("DOMContentLoaded", function() {
   
     setInterval(nextSlide, 3000); // переключение слайдов каждые 3 секунды
   });
+  
+document.addEventListener("DOMContentLoaded", function() {
+  var currentSlide = 0;
+  var slides = document.querySelectorAll('.slide2');
+
+  function showSlide(index) {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('active2');
+    }
+    slides[index].classList.add('active2');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 3000); // переключение слайдов каждые 3 секунды
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var currentSlide = 0;
+  var slides = document.querySelectorAll('.slide3');
+
+  function showSlide(index) {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('active3');
+    }
+    slides[index].classList.add('active3');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 3000); // переключение слайдов каждые 3 секунды
+});
