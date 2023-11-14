@@ -83,3 +83,23 @@ const Cheker = document.getElementById("Phone");
 if (window.screen.width > 500){
     Cheker.className = "Blocker"
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var currentSlide = 0;
+    var slides = document.querySelectorAll('.slide');
+  
+    function showSlide(index) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slides[index].classList.add('active');
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+  
+    setInterval(nextSlide, 3000); // переключение слайдов каждые 3 секунды
+  });
