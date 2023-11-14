@@ -178,7 +178,7 @@ body{
     animation-iteration-count: infinite;
     text-shadow: 0px 0px 0px red;
 }
-@keyframes Logo{
+/* @keyframes Logo{
     0%{
         text-shadow: 5px 5px 5px red;
     }
@@ -189,7 +189,7 @@ body{
         text-shadow: 5px 5px 5px red;
     }
 }
-
+ */
 .slider2 {
     position: relative;
     width: 100%;
